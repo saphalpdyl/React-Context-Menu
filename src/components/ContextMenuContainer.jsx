@@ -1,11 +1,12 @@
 import cn from "../utils/cn";
 
-const ContextMenuContainer = ({ children, isShown, position, className }) => {
+const ContextMenuContainer = ({ children, isShown, position, className, style }) => {
   return (
     <div
       style={{
         top: position ? position.y : 0,
         left: position ? position.x : 0,
+        ...style
       }}
       className={cn(`
         fixed
